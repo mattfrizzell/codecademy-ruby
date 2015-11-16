@@ -4,5 +4,8 @@ user_input = gets.chomp
 user_input.downcase!
 
 if user_input.include? "s"
-   print "Yep, you have an s in there"
+   user_input.gsub!(/s/, "th")
+   puts "What doeth thith even mean: '#{user_input}'?"
+else
+    print "Well that stinks, you didn't tell me anything that included the letter 'S'. :("
 end
