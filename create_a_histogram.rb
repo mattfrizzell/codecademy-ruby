@@ -1,6 +1,8 @@
+# Get user input
 puts "Hey I need you to tell me something again, preferably with a lot of words in it"
 text = gets.chomp
 
+#Put all the words into an array
 words = text.split(" ")
 
 frequencies = Hash.new(0)
