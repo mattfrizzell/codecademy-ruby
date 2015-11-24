@@ -34,9 +34,18 @@ when "update"
     end
     
 when "display"
-    puts "Movies!"
+    movies.each {|movie, rating| puts "#{movie}: #{rating}"}
+    
 when "delete"
-    puts "Deleted!"
+    puts "Please specify a movie title."
+    title = gets.chomp
+    
+     if !movies[title.to_sym]
+        puts "Error: Can't delete #{title} because it isn't in your collection!"
+    else
+        movies.delete(title)
+    end
+    
 else
     puts "Error!"
 end
